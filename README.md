@@ -74,8 +74,7 @@ Array
 
 )
 ```
-```
-// For more advanced usage
+### For more advanced usage
 // SimpleVCARD constructor takes four parameters 
 /*
 
@@ -95,9 +94,11 @@ Array
 
 3. data_flag | boolean (true or false) | true for when filename is data, false when file | default is set to false
 
-4. debug_falg | boolean (true or false) | true to display errors, false to hide errors | default is set to false
+4. debug_flag | boolean (true or false) | true to display errors, false to hide errors | default is set to false
 
 */
+```
+
 // Examples
 // $vcard = new SimpleVCARD("contacts.vcf","fn,ct,em",false,true);
 // $vcard = new SimpleVCARD("vcard contact format","",true,false);
