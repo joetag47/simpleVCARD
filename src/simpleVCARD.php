@@ -146,8 +146,9 @@ class SimpleVCARD
 
 		} else {
 
-			// get extension of file
-			$ext = pathinfo(basename($filename),PATHINFO_EXTENSION);
+
+			// stream type
+			$mime = mime_content_type($filename);
 
 			// check file validity
 			if ( ! is_readable( $filename ) ) {
@@ -156,8 +157,9 @@ class SimpleVCARD
 				return false;
 			}
 
-			else if (! in_array($ext, ["vcf","VCF"])){
-				$this->error( 'Invalid File, not a vcard! ' . $filename );
+			// media check type
+			else if ($mime !== "text/x-vcard"){
+				$this->error( 'Invalid File, not a vcard! file type is : ' . explode("/", $mime)[1]);
 
 				return false;
 			}
@@ -273,8 +275,6 @@ class SimpleVCARD
 
 				 // 
 				array_push($this->records, $this->person);
-			
-
 				
 			}
 
@@ -287,7 +287,7 @@ class SimpleVCARD
 	// basic usage
 	public static function retrieve($filename, $specs = "", $isdata = false, $debug = false){
 		// 
-		$vcard =  new self($filename, $specs = "", $isdata = false, $debug = false);
+		$vcard =  new self($filename,$specs, $isdata,$debug);
 
 		if ($vcard->success()){
 			// 
