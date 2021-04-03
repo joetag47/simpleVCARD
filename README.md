@@ -126,9 +126,9 @@ SimpleVCARD::ParseErrno(), $vcard->errno()
 <table>
 <tr><th>Error code</th><th>Message</th><th>Comment</th></tr>
 <tr><td>1</td><td>File not found</td><td>location of file?</td></tr>
-<tr><td>1</td><td>Invalid File</td><td>not a vcard</td></tr>
-<tr><td>1</td><td>Data is invalid</td><td>not a vcard data</td></tr>
-<tr><td>1</td><td>Invalid String</td><td>not a vcard</td></tr>
-<tr><td>2</td><td>Specification String is invalid, format</td><td> Must look like e.g fn,em,cn etc!.</td></tr>
-<tr><td>3</td><td>Specification Prefix is invalid</td><td>must look like e.g fn or em or cn</td></tr>
+<tr><td>2</td><td>Invalid File</td><td>not a vcard</td></tr>
+<tr><td>3</td><td>Data is invalid</td><td>not vcard data</td></tr>
+<tr><td>4</td><td>Invalid string format</td><td>not a vcard</td></tr>
+<tr><td>5</td><td>Specification String is invalid, format</td><td> Must look like e.g fn,em,cn etc!.</td></tr>
+<tr><td>6</td><td>Specification Prefix is invalid</td><td>must look like e.g fn or em or cn</td></tr>
 </table>	
