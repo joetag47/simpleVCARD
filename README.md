@@ -76,7 +76,7 @@ Array
 ```
 ### For more advanced usage
 SimpleVCARD constructor takes four parameters.
-_The basic usage only takes one parameter. Eg_```php SimpleVCARD($filename) ```
+_The basic usage only takes one parameter. Eg_``` SimpleVCARD($filename) ```
 
 1. **filename** | string | (.vcf) or data(vcard format);
 
