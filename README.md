@@ -10,10 +10,14 @@ No additional extensions needed (relies on inbuilt PHP functions).
 ## Basic Usage
 ```php  
 if ( $vcard = SimpleVCARD::retrieve("contacts.vcf") ) {
-    print_r( $this->records );
+    print_r( $vcard->records );
  } else {
     echo SimpleVCARD::parseError();
  }
+ 
+ // data is stored in records | an associative array
+ $vcard->records
+ 
  ```
  ```php
 Array
