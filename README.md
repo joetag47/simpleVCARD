@@ -96,6 +96,7 @@ _The basic usage only takes one parameter._
 
 4. **debug_flag** | boolean (true or false) | true to display errors, false to hide errors | _default is set to false_
 
+// new SimpleVCARD($filename, $options, $data_flag, $debug_flag);
 ```
 
 // Examples
