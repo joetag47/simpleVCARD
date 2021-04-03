@@ -78,9 +78,9 @@ Array
 SimpleVCARD constructor takes four parameters 
 _The basic usage only takes one parameter._
 
-1. filename | string | (.vcf) or data(vcard format);
+1. **filename** | string | (.vcf) or data(vcard format);
 
-2. options | seperated with comma. default is set to empty string for all options | Prefix includes; 
+2. **options** | seperated with comma. Prefix includes; _default is set to empty string for all options_  
     -  fn  for fullname,
 	-  ct  for contact,
 	-  em  for email,
@@ -92,9 +92,9 @@ _The basic usage only takes one parameter._
 	-  no  for notes,
 	-  bd  for birthday
 
-3. data_flag | boolean (true or false) | true for when filename is data, false when filename points to a file | default is set to false
+3. **data_flag** | boolean (true or false) | true for when filename is data, false when filename points to a file | _default is set to false_
 
-4. debug_flag | boolean (true or false) | true to display errors, false to hide errors | default is set to false
+4. **debug_flag** | boolean (true or false) | true to display errors, false to hide errors | _default is set to false_
 
 ```
 
