@@ -74,6 +74,14 @@ Array
 
 )
 
+```
 ## Installation
 
-Clone git repository https://github.com/joetag47/simpleVCARD/
+Clone git repository :: https://github.com/joetag47/simpleVCARD/
+
+```php
+   
+ // include in project  
+ include_once 'simple-vcard/src/simpleVCARD.php;
+ 
+ ```
