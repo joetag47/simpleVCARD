@@ -75,8 +75,7 @@ Array
 )
 ```
 ### For more advanced usage
-// SimpleVCARD constructor takes four parameters 
-/*
+SimpleVCARD constructor takes four parameters 
 
 1. filename | string | (.vcf) or data(vcard format);
 
@@ -96,13 +95,13 @@ Array
 
 4. debug_flag | boolean (true or false) | true to display errors, false to hide errors | default is set to false
 
-*/
 ```
 
 // Examples
 // $vcard = new SimpleVCARD("contacts.vcf","fn,ct,em",false,true);
 // $vcard = new SimpleVCARD("vcard contact format","",true,false);
 // $vcard = new SimpleVCARD("contacts.vcf","fn,ct,em");
+
 ```
 ## Installation
 
