@@ -76,6 +76,7 @@ Array
 ```
 ### For more advanced usage
 SimpleVCARD constructor takes four parameters 
+_The basic usage only takes one parameter._
 
 1. filename | string | (.vcf) or data(vcard format);
 
@@ -91,7 +92,7 @@ SimpleVCARD constructor takes four parameters
 	-  no  for notes,
 	-  bd  for birthday
 
-3. data_flag | boolean (true or false) | true for when filename is data, false when file | default is set to false
+3. data_flag | boolean (true or false) | true for when filename is data, false when filename points to a file | default is set to false
 
 4. debug_flag | boolean (true or false) | true to display errors, false to hide errors | default is set to false
 
