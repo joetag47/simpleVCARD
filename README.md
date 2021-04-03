@@ -73,7 +73,35 @@ Array
         )
 
 )
+```
+```
+// For more advanced usage
+// SimpleVCARD constructor takes four parameters 
+/*
 
+1. filename | string | (.vcf) or data(vcard format);
+
+2. options | seperated with comma. default is set to empty string for all options | Prefix includes; 
+    -  fn  for fullname,
+	-  ct  for contact,
+	-  em  for email,
+	-  ph  for photo,
+	-  ad  for address,
+	-  org  for organization,
+	-  ti  for title,
+	-  ur  for url,
+	-  no  for notes,
+	-  bd  for birthday
+
+3. data_flag | boolean (true or false) | true for when filename is data, false when file | default is set to false
+
+4. debug_falg | boolean (true or false) | true to display errors, false to hide errors | default is set to false
+
+*/
+// Examples
+// $vcard = new SimpleVCARD("contacts.vcf","fn,ct,em",false,true);
+// $vcard = new SimpleVCARD("vcard contact format","",true,false);
+// $vcard = new SimpleVCARD("contacts.vcf","fn,ct,em");
 ```
 ## Installation
 
