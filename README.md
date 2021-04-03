@@ -76,7 +76,7 @@ Array
 ```
 ### For more advanced usage
 SimpleVCARD constructor takes four parameters.
-*The basic usage only takes one parameter. Eg new SimpleVCARD($filename).*
+*The basic usage only takes one parameter. Eg ```  SimpleVCARD($filename) ```.*
 
 1. **filename** | string | (.vcf) or data(vcard format);
 
@@ -99,7 +99,7 @@ SimpleVCARD constructor takes four parameters.
 
 ```
 // format
-// new SimpleVCARD($filename, $options, $data_flag, $debug_flag);
+// SimpleVCARD($filename, $options, $data_flag, $debug_flag);
 
 // Examples
 // $vcard = new SimpleVCARD("contacts.vcf","fn,ct,em",false,true);
