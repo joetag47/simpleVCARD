@@ -109,7 +109,7 @@ _The basic usage only takes one parameter. Eg_``` SimpleVCARD($filename) ```
 ```
 ## Installation
 
-Clone git repository :: [click here] (https://github.com/joetag47/simpleVCARD/archive/refs/heads/main.zip)
+Clone git repository :: [click here](https://github.com/joetag47/simpleVCARD/archive/refs/heads/main.zip)
 
 ```php
    
