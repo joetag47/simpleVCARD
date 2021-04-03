@@ -13,7 +13,7 @@ if ( $vcard = SimpleVCARD::retrieve("contacts.vcf") ) {
     echo SimpleVCARD::parseError();
  }
  ```
- ```
+ ```php
 Array
 (
     [0] => Array
@@ -76,7 +76,7 @@ Array
 ```
 ### For more advanced usage
 SimpleVCARD constructor takes four parameters.
-*The basic usage only takes one parameter. Eg ```  SimpleVCARD($filename) ```.*
+*The basic usage only takes one parameter. Eg ```php  SimpleVCARD($filename) ```.*
 
 1. **filename** | string | (.vcf) or data(vcard format);
 
@@ -97,7 +97,7 @@ SimpleVCARD constructor takes four parameters.
 4. **debug_flag** | boolean (true or false) | true to display errors, false to hide errors | _default is set to false_
 
 
-```
+```php
 // format
 // SimpleVCARD($filename, $options, $data_flag, $debug_flag);
 
