@@ -193,7 +193,7 @@ Clone git repository : [click here](https://github.com/joetag47/simpleVCARD/arch
 
 ## Error Codes
 
-SimpleVCARD::ParseErrno(), $vcard->errno()
+SimpleVCARD::ParseError(), $vcard->error()
 
 <table>
 <tr><th>Error code</th><th>Message</th><th>Comment</th></tr>
