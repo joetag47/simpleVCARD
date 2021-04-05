@@ -15,8 +15,9 @@ if ( $vcard = SimpleVCARD::retrieve("contacts.vcf") ) {
     echo SimpleVCARD::parseError();
  }
  
- // data is stored in records | an associative array
- $vcard->records
+ // data is stored in records | an associative array or retrieve with records() method
+ $vcard->records 
+ $vcard->records() 
  
  ```
  ```php
