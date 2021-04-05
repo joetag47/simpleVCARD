@@ -298,6 +298,10 @@ class SimpleVCARD
 
 		return false;
 	}
+	
+	public function records(){
+		return $this->source["records"];
+	}
 
 	private function success(){
 
