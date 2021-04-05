@@ -114,6 +114,7 @@ _The basic usage only takes one parameter. Eg_``` SimpleVCARD($filename) ```
 // $vcard = new SimpleVCARD("contacts.vcf","fn,ct,em");
 
 ```
+Find more examples here [click here](https://github.com/joetag47/simpleVCARD/tree/main/examples)
 
 ## To Json
 Render data in JSON format.
@@ -148,11 +149,40 @@ echo ( $vcard->toHTML("id", "class1 or class2") );
 
 ```
 
+## Debug 
 
+```php  
+
+// enable error reporting
+ini_set('error_reporting', E_ALL );
+ini_set('display_errors', 1 );
+
+// pass true true
+if ( $vcard = SimpleVCARD::retrieve("contacts.vcf","",false,true) ) {
+    print_r( $vcard->records );
+ } else {
+    echo SimpleVCARD::parseError();
+ }
+ 
+ ```
+ 
+## Classic OOP Style
+
+ ```php  
+// pass true true
+if ( $vcard = new SimpleVCARD("contacts.vcf") ) {
+	echo "<pre>";
+    	  print_r( $vcard->records() );
+    	echo "</pre>";
+ } else {
+    echo SimpleVCARD::parseError();
+ }
+ 
+ ```
 
 ## Installation
 
-Clone git repository :: [click here](https://github.com/joetag47/simpleVCARD/archive/refs/heads/main.zip)
+Clone git repository : [click here](https://github.com/joetag47/simpleVCARD/archive/refs/heads/main.zip)
 
 ```php
    
