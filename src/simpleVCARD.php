@@ -12,6 +12,92 @@
  * @version    0.5, 2021-04-03
  */
 
+
+/**
+ * 
+ Examples
+*
+* //example 1
+*if ( $vcard = SimpleVCARD::retrieve("contacts.vcf") ) {
+*    print_r( $vcard->records );
+* } else {
+*    echo SimpleVCARD::parseError();
+* }
+*
+* // example 2
+* $data =  "BEGIN:VCARD
+*          VERSION:2.1
+*          FN:John Doe
+*          TEL;CELL:+17030000000
+*          EMAIL;HOME:john.doe@email.com
+*          ADR;HOME:;;woodbug ;;;;
+*          END:VCARD";
+*
+*if ( $vcard = SimpleVCARD::retrieve($data,"",true) ) {
+*    echo "<pre>";
+*    print_r( $vcard->records );
+*    echo "</pre>";
+* } else {
+*    echo SimpleVCARD::parseError();
+* }
+*
+* // example 3
+* // check readme to find all supported prefixes
+*$format =  "fn,ct,em";
+*
+*if ( $vcard = SimpleVCARD::retrieve("contact.vcf",$format) ) {
+*    echo "<pre>";
+*    print_r( $vcard->records );
+*    echo "</pre>";
+* } else {
+*    echo SimpleVCARD::parseError();
+* }
+*
+* // Example 4
+* // check readme to find all supported prefixes
+*$format =  "fn,ct,em,ph,ad";
+*
+* // debug flag
+*$debug = true;
+*
+* // is data flag
+*$data = false;
+*
+*if (isset($_FILES['file'])) {
+*  
+*  // file 
+*  $vcftmp = $_FILES['file']['tmp_name'];
+*  
+*  if ( $vcard = new SimpleVCARD($vcftmp, $data, $format, $debug) ) {
+*    echo "<pre>";
+*    print_r( $vcard->records() );
+*    echo "</pre>";
+*  } else {
+*      echo SimpleVCARD::parseError();
+*  }
+*}
+*
+* // Example 5 
+* // render data in JSON format
+*$vcard = SimpleVCARD::retrieve("contacts.vcf") );
+*echo ( $vcard->toJSON() );
+*
+* // Example 6
+* // render data in HTML format - simple
+*$vcard = SimpleVCARD::retrieve("contacts.vcf") );
+*
+* // echo table
+*echo ( $vcard->toHTML() );
+*
+* // Example 7
+* // render data in HTML format - extra
+*$vcard = SimpleVCARD::retrieve("contacts.vcf", "fn,ct,em") );
+*
+* // echo table. Id and class(es) should not contain # or . use spaces to seperate different class names
+*echo ( $vcard->toHTML("id", "class1 or class2") );
+*
+*/
+
 /**
  * 
  logs version 0.5
