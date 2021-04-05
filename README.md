@@ -114,6 +114,42 @@ _The basic usage only takes one parameter. Eg_``` SimpleVCARD($filename) ```
 // $vcard = new SimpleVCARD("contacts.vcf","fn,ct,em");
 
 ```
+
+## To Json
+Render data in JSON format.
+
+```php
+
+// render data in JSON format
+$vcard = SimpleVCARD::retrieve("contacts.vcf") );
+echo ( $vcard->toJSON() );
+
+```
+
+## To HTML
+Render data in HTML, displays data in table with their respective columns.
+The method ``` $vard->toHTML() ``` takes two parameters id feild and class feild, default for both is nothing.
+
+
+```php
+
+// render data in HTML format - simple
+$vcard = SimpleVCARD::retrieve("contacts.vcf") );
+
+// echo table
+echo ( $vcard->toHTML() );
+
+
+// render data in HTML format - extra
+$vcard = SimpleVCARD::retrieve("contacts.vcf", "fn,ct,em") );
+
+// echo table. Id and class(es) should not contain # or . use spaces to seperate different class names
+echo ( $vcard->toHTML("id", "class1 or class2") );
+
+```
+
+
+
 ## Installation
 
 Clone git repository :: [click here](https://github.com/joetag47/simpleVCARD/archive/refs/heads/main.zip)
