@@ -157,8 +157,7 @@ echo ( $vcard->toHTML("id", "class1 or class2") );
 ini_set('error_reporting', E_ALL );
 ini_set('display_errors', 1 );
 
-// pass true true
-if ( $vcard = SimpleVCARD::retrieve("contacts.vcf","",false,true) ) {
+if ( $vcard = SimpleVCARD::retrieve("contacts.vcf", "", false, true) ) {
     print_r( $vcard->records );
  } else {
     echo SimpleVCARD::parseError();
@@ -175,7 +174,7 @@ if ( $vcard = new SimpleVCARD("contacts.vcf") ) {
     	  print_r( $vcard->records() );
     	echo "</pre>";
  } else {
-    echo SimpleVCARD::parseError();
+    echo "Error : ".$vcard->error();
  }
  
  ```
