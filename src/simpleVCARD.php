@@ -302,6 +302,55 @@ class SimpleVCARD
 	public function records(){
 		return $this->source["records"];
 	}
+	
+	// to json
+	public function toJson(){
+		return json_encode($this->source["records"]);
+	}
+
+	// to html
+	public function toHTML($id = "",$class  = ""){
+		// settings
+		$t = "<table id='".$id."' class='".$class."'>";
+		$th = "";
+		$td = "";
+		$tr = "";
+		$c = 1;
+
+		foreach ($this->specs as $key => $value) {
+			//
+			$th .= "<th>".$key."</th>";
+			
+		}
+
+		$t .= "<thead style='text-align:left'><tr><th>No</th>".$th."</tr></thead><tbody>";
+
+		foreach ($this->source["records"] as $r => $data) {
+			//
+			$td = "";
+
+			foreach ($this->specs as $k => $value) {
+				
+
+				if ($k == "contact"){
+					
+					$ct = implode(", ", $data[$k]);
+					//
+					$td .= "<td>".$ct."</td>";
+
+				} else {
+					//
+					$td .= "<td>".$data[$k]."</td>";
+				}
+			}
+
+			$t .= "<tr><td>".$c++."</td>".$td."</tr>"."\r\n";
+		}
+
+		$t .= "<tbody></table>";
+
+		return $t;
+	}
 
 	private function success(){
 
