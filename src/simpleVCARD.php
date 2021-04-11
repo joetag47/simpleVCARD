@@ -244,7 +244,7 @@ class SimpleVCARD
 			}
 
 			// media check type
-			else if ($mime !== "text/x-vcard"){
+			else if ($mime !== "text/x-vcard" OR $mime !== "text/vcard"){
 				$this->error( 'Invalid File, not a vcard! file type is : ' . explode("/", $mime)[1]);
 
 				return false;
