@@ -1,4 +1,4 @@
-# SimpleVCARD Library 0.5.1 (Official)
+# SimpleVCARD Library 0.5.2 (Official)
 [<img src="https://img.shields.io/badge/license-MIT-success" />](https://github.com/joetag47/simpleVCARD/blob/main/LICENSE) [<img src="https://img.shields.io/badge/issues-0-important" />](https://github.com/joetag47/simpleVCARD/issues)
 
 vCalender PHP Reader, retrieves data from vCalender files, Supports v2.0, v3.0, v4.0
@@ -204,3 +204,10 @@ SimpleVCARD::ParseError(), $vcard->error()
 <tr><td>5</td><td>Specification String is invalid, format</td><td> Must look like e.g fn,em,cn etc!.</td></tr>
 <tr><td>6</td><td>Specification Prefix is invalid</td><td>must look like e.g fn or em or cn</td></tr>
 </table>	
+
+
+## History
+
+```
+v0.5.2 (2021-04-11) : Fixed support for linux (.vcf) file reading.
+```
