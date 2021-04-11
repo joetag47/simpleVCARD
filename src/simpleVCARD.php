@@ -234,7 +234,7 @@ class SimpleVCARD
 
 
 			// stream type
-			$mime = mime_content_type($filename);
+			$mime = str_replace("x-", "", mime_content_type($filename));
 
 			// check file validity
 			if ( ! is_readable( $filename ) ) {
@@ -244,7 +244,7 @@ class SimpleVCARD
 			}
 
 			// media check type
-			else if ($mime !== "text/x-vcard" OR $mime !== "text/vcard"){
+			else if ($mime !== "text/vcard"){
 				$this->error( 'Invalid File, not a vcard! file type is : ' . explode("/", $mime)[1]);
 
 				return false;
