@@ -1,4 +1,4 @@
-# SimpleVCARD Library 0.5.2 (Official)
+# SimpleVCARD Library 0.5.3 (Official)
 [<img src="https://img.shields.io/badge/license-MIT-success" />](https://github.com/joetag47/simpleVCARD/blob/main/LICENSE) [<img src="https://img.shields.io/badge/issues-0-important" />](https://github.com/joetag47/simpleVCARD/issues)
 
 vCalender PHP Reader, retrieves data from vCalender files, Supports v2.0, v3.0, v4.0
