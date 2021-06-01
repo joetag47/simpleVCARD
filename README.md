@@ -210,4 +210,5 @@ SimpleVCARD::ParseError(), $vcard->error()
 
 ```
 v0.5.2 (2021-04-11) : Fixed support for linux (.vcf) file reading.
+v0.5.3 (2021-06-01) : Fixed support for vcard version 3.0.
 ```
