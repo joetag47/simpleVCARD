@@ -279,62 +279,102 @@ class SimpleVCARD
 					if (strpos($fields[$i], "FN") !== false ){
 								
 						$fn = explode(":", $fields[$i]);
+
+						if (!isset($fn[1])){
+							$fn[1] = "";
+						}
 						// 
-						$this->person["fullname"] = $fn[1];
+						$this->person["fullname"] = str_replace(["\n","\r","\n\r","\0"], "", $fn[1]);
 					}
 
 					if (strpos($fields[$i], "TEL") !== false ){
 						$cn = explode(":", $fields[$i]);
+
+						if (!isset($cn[1])){
+							$cn[1] = "";
+						}
 						// 
-						array_push($this->person["contact"], str_replace("-", "", $cn[1]));
+						array_push($this->person["contact"], str_replace(["-","\n","\r","\n\r","\0"], "", $cn[1]));
 					}
 
 					if (strpos($fields[$i], "EMAIL") !== false ){
 						// 
 						$em = explode(":", $fields[$i]);
+
+						if (!isset($em[1])){
+							$em[1] = "";
+						}
 						// 
-						$this->person["email"] = $em[1];
+						$this->person["email"] = str_replace(["\n","\r","\n\r","\0"], "", $em[1]);
 
 					}
 
 					if (strpos($fields[$i], "PHOTO") !== false ){
 						$ph = explode(":", $fields[$i]);
+
+						if (!isset($ph[1])){
+							$ph[1] = "";
+						}
 						// 
 						$this->person["photo"] = $ph[1];
 					}
 
 					if (strpos($fields[$i], "ADR") !== false ){
 						$ad = explode(":", $fields[$i]);
+
+						if (!isset($ad[1])){
+							$ad[1] = "";
+						}
 						// 
 						$this->person["address"] = str_replace(";", "", $ad[1]);
 					}
 
 					if (strpos($fields[$i], "ORG") !== false ){
 						$or = explode(":", $fields[$i]);
+
+						if (!isset($or[1])){
+							$or[1] = "";
+						}
 						// 
 						$this->person["organization"] = str_replace(";", "", $or[1]);
 					}
 
 					if (strpos($fields[$i], "TITLE") !== false ){
 						$ti = explode(":", $fields[$i]);
+
+						if (!isset($ti[1])){
+							$ti[1] = "";
+						}
 						// 
 						$this->person["title"] = str_replace(";", "", $ti[1]);
 					}
 
 					if (strpos($fields[$i], "URL") !== false ){
 						$ur = explode(":", $fields[$i]);
+
+						if (!isset($ur[1])){
+							$ur[1] = "";
+						}
 						// 
 						$this->person["url"] = str_replace(";", "", $ur[1]);
 					}
 
 					if (strpos($fields[$i], "NOTE") !== false ){
 						$no = explode(":", $fields[$i]);
+
+						if (!isset($no[1])){
+							$no[1] = "";
+						}
 						// 
 						$this->person["notes"] = str_replace(";", "", $no[1]);
 					}
 
 					if (strpos($fields[$i], "BDAY") !== false ){
 						$bd = explode(":", $fields[$i]);
+
+						if (!isset($bd[1])){
+							$bd[1] = "";
+						}
 						// 
 						$this->person["birthday"] = $bd[1];
 					}
