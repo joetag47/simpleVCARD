@@ -1,4 +1,4 @@
-# SimpleVCARD Library 0.5.3 (Official)
+# SimpleVCARD Library 0.5.4 (Official)
 [<img src="https://img.shields.io/badge/license-MIT-success" />](https://github.com/joetag47/simpleVCARD/blob/main/LICENSE) [<img src="https://img.shields.io/badge/issues-0-important" />](https://github.com/joetag47/simpleVCARD/issues)
 
 vCalender PHP Reader, retrieves data from vCalender files, Supports v2.0, v3.0, v4.0
@@ -211,4 +211,5 @@ SimpleVCARD::ParseError(), $vcard->error()
 ```
 v0.5.2 (2021-04-11) : Fixed support for linux (.vcf) file reading.
 v0.5.3 (2021-06-01) : Fixed support for vcard version 3.0.
+v0.5.4 (2021-06-09) : Added validation to contact information.
 ```
