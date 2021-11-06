@@ -295,7 +295,7 @@ class SimpleVCARD
 						}
 						
 						// check duplication of contacts
-						if (!in_array($cn[1]), $this->person["contact"])){
+						if (!in_array($cn[1], $this->person["contact"])){
 							// 
 							array_push($this->person["contact"], str_replace(["-","\n","\r","\n\r","\0"], "", $cn[1]));
 						}
